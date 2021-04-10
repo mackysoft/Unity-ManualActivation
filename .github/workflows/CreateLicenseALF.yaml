@@ -10,10 +10,12 @@ jobs:
         id: getManualLicenseFile
         uses: webbertakken/unity-request-manual-activation-file@v1.2
         with:
-          unityVersion: 2019.4.24f1
+          unityVersion: 2019.2.2f1-windows
           
       - name: Expose as artifact
         uses: actions/upload-artifact@v1
         with:
-          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          name: Unity_v2019.2.2f1.alf
+          path: Unity_v2019.2.2f1.alf
+          #name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          #path: ${{ steps.getManualLicenseFile.outputs.filePath }}
