@@ -1,5 +1,12 @@
 ﻿name: Acquire activation file
-on: [push]
+
+on: 
+  workflow_dispatch:
+    inputs:
+      unityVersion:
+        description: 'Unity Version to request an activation file from.'
+        required: true
+
 jobs:
   activation:
     name: Request manual activation file 🔑
@@ -8,14 +15,12 @@ jobs:
     
       - name: Request manual activation file
         id: getManualLicenseFile
-        uses: webbertakken/unity-request-manual-activation-file@v1.2
+        uses: game-ci/unity-request-activation-file@v2
         with:
-          unityVersion: 2019.2.2f1-windows
+          unityVersion: ${{ github.event.inputs.unityVersion }}
           
       - name: Expose as artifact
         uses: actions/upload-artifact@v1
         with:
-          name: Unity_v2019.2.2f1.alf
-          path: Unity_v2019.2.2f1.alf
-          #name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-          #path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
