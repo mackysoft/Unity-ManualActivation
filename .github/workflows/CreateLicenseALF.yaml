@@ -1,24 +1,19 @@
-name: Create ALF File
-
+﻿name: Acquire activation file
 on: [push]
-
 jobs:
-  build:
-
+  activation:
+    name: Request manual activation file 🔑
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        unity-tag: [2018.4.19f1, 2019.4.5f1]
-
-    container: docker://gableroux/unity3d:${{ matrix.unity-tag }}
-
     steps:
-    - run: mkdir artifact
-    - run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -logfile -createManualActivationFile || exit 0
-    - run: cp "Unity_v$UNITY_VERSION.alf" artifact
-      env:
-        UNITY_VERSION: ${{ matrix.unity-tag }}
-    - uses: actions/upload-artifact@master
-      with:
-        name: ${{ matrix.unity-tag }}
-        path: artifact
+    
+      - name: Request manual activation file
+        id: getManualLicenseFile
+        uses: webbertakken/unity-request-manual-activation-file@v1.2
+        with:
+          unityVersion: 2019.2.11f1
+          
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
