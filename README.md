@@ -16,6 +16,8 @@ Open the `Acquire activation file with GUI` page.
 
 For this repository, [here](https://github.com/mackysoft/Unity-ManualActivation/actions/workflows/ActivationWithGUI.yaml).
 
+![OpenGitHubActionPage](https://user-images.githubusercontent.com/13536348/114270217-255a5f80-9a46-11eb-9555-febf8f20ae4e.jpg)
+
 
 ### 3. Run workflow
 
@@ -23,11 +25,15 @@ For this repository, [here](https://github.com/mackysoft/Unity-ManualActivation/
 2. Specify the desired Unity version (e.g. 2019.4.0f1) from which you want to acquire the ALF file.
 3. Click on the `Run workflow` button.
 
+![RunWorkflow](https://user-images.githubusercontent.com/13536348/114270225-28555000-9a46-11eb-8589-9b225d819082.jpg)
+
 
 ### 4. Aquire ALF file
 
 1. Acquire the `Unity_v20XX.X.XfX.alf` file from the artifacts on the completed workflow page.
 2. Unzip the zip file you acquired.
+
+![AcquireALF](https://user-images.githubusercontent.com/13536348/114270233-2db29a80-9a46-11eb-86d5-9d2ba52056d1.jpg)
 
 
 ### 4. Aquire ULF file
