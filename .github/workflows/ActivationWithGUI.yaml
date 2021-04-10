@@ -1,6 +1,6 @@
-﻿name: Acquire activation file
+﻿name: Acquire activation file with GUI
 
-on: 
+on:
   workflow_dispatch:
     inputs:
       unityVersion:
