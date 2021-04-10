@@ -1,4 +1,4 @@
-# Unity ALF Creator
+# Unity - Manual Activation
 
 This is a repository of instructions on how to acquire the ALF and ULF files for activating Unity.
 
@@ -14,14 +14,15 @@ Fork this repository in order to work with GitHub Actions.
 
 Open the `Acquire activation file with GUI` page.
 
-For this repository, [here](https://github.com/mackysoft/Unity-ALF-Creator/actions/workflows/ActivationWithGUI.yaml).
+For this repository, [here](https://github.com/mackysoft/Unity-ManualActivation/actions/workflows/ActivationWithGUI.yaml).
 
 
 ### 3. Run workflow
 
 1. Click on the `Run workflow` drop-down
-2. Specify the desired Unity version (e.g. 2019.4.0f1) from which you want to aquire the ALF file.
+2. Specify the desired Unity version (e.g. 2019.4.0f1) from which you want to acquire the ALF file.
 3. Click on the `Run workflow` button.
+
 
 ### 4. Aquire ALF file
 
