@@ -36,7 +36,7 @@ For this repository, [here](https://github.com/mackysoft/Unity-ManualActivation/
 ![AcquireALF](https://user-images.githubusercontent.com/13536348/114270233-2db29a80-9a46-11eb-86d5-9d2ba52056d1.jpg)
 
 
-### 4. Aquire ULF file
+### 5. Aquire ULF file
 
 1. Open the manual activation page of Unity. (https://license.unity3d.com/manual)
 2. Activate using the `Unity_v20XX.X.XfX.alf` file you acquired.
