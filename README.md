@@ -46,6 +46,6 @@ For this repository, [here](https://github.com/mackysoft/Unity-ManualActivation/
 
 You can acquire the ULF file by following the above process.
 
-If this does not work, please refer to the official documentation.
+If this does not work, please refer to the Game CI official documentation.
 
 https://game.ci/docs/github/activation
